@@ -71,7 +71,7 @@
     <enum>Qt::Horizontal</enum>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnTL">
+  <widget class="QPushButton" name="btnTL">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -90,7 +90,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnTC">
+  <widget class="QPushButton" name="btnTC">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -109,7 +109,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnTR">
+  <widget class="QPushButton" name="btnTR">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -128,7 +128,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnMR">
+  <widget class="QPushButton" name="btnMR">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -147,7 +147,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnMC">
+  <widget class="QPushButton" name="btnMC">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -166,7 +166,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnML">
+  <widget class="QPushButton" name="btnML">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -185,7 +185,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnBL">
+  <widget class="QPushButton" name="btnBL">
    <property name="geometry">
     <rect>
      <x>100</x>
@@ -204,7 +204,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnBC">
+  <widget class="QPushButton" name="btnBC">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -223,7 +223,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="TTTSpace" name="btnBR">
+  <widget class="QPushButton" name="btnBR">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -242,7 +242,7 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="ResetButton" name="btnNew">
+  <widget class="QPushButton" name="btnNew">
    <property name="geometry">
     <rect>
      <x>160</x>
@@ -278,185 +278,6 @@
    </property>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>TTTSpace</class>
-   <extends>QPushButton</extends>
-   <header>tttspace.h</header>
-   <slots>
-    <slot>setMove()</slot>
-   </slots>
-  </customwidget>
-  <customwidget>
-   <class>ResetButton</class>
-   <extends>QPushButton</extends>
-   <header>resetbutton.h</header>
-   <slots>
-    <slot>resetGame()</slot>
-   </slots>
-  </customwidget>
- </customwidgets>
  <resources/>
- <connections>
-  <connection>
-   <sender>btnTL</sender>
-   <signal>clicked()</signal>
-   <receiver>btnTL</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>140</x>
-     <y>157</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>123</x>
-     <y>170</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnTC</sender>
-   <signal>clicked()</signal>
-   <receiver>btnTC</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>199</x>
-     <y>161</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>134</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnTR</sender>
-   <signal>clicked()</signal>
-   <receiver>btnTR</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>268</x>
-     <y>160</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>300</x>
-     <y>171</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnMC</sender>
-   <signal>clicked()</signal>
-   <receiver>btnMC</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>213</x>
-     <y>256</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>196</x>
-     <y>217</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnMR</sender>
-   <signal>clicked()</signal>
-   <receiver>btnMR</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>289</x>
-     <y>244</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>294</x>
-     <y>233</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnML</sender>
-   <signal>clicked()</signal>
-   <receiver>btnML</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>127</x>
-     <y>226</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>121</x>
-     <y>235</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnBL</sender>
-   <signal>clicked()</signal>
-   <receiver>btnBL</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>118</x>
-     <y>307</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>117</x>
-     <y>317</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnBC</sender>
-   <signal>clicked()</signal>
-   <receiver>btnBC</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>205</x>
-     <y>317</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>197</x>
-     <y>299</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnBR</sender>
-   <signal>clicked()</signal>
-   <receiver>btnBR</receiver>
-   <slot>setMove()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>291</x>
-     <y>308</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>291</x>
-     <y>319</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btnNew</sender>
-   <signal>clicked()</signal>
-   <receiver>btnNew</receiver>
-   <slot>resetGame()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>205</x>
-     <y>404</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>196</x>
-     <y>395</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>
