@@ -1,0 +1,4 @@
+[Project]
+Name=tictactoe
+Manager=KDevCMakeManager
+VersionControl=kdevgit
