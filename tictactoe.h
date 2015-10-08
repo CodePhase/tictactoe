@@ -31,6 +31,8 @@ private slots:
 private:
   enum boardSpaces_t {TL, TC, TR, ML, MC, MR, BL, BC, BR};
   enum spaceState_t {enable, disable};
+  enum gameState_t {pending, winner, tie};
+  gameState_t gameState;
   static QString chrPlayerMarker[];
   Ui::tictactoe *ui;
   QPushButton *GameSpaces[9];

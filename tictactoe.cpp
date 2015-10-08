@@ -88,16 +88,19 @@ void tictactoe::InitGame()
     intCurrentPlayer = 0;
     ui->lblMessages->setText(QString("X's Turn"));
   }
+  
+  gameState = pending;
 }
 
 void tictactoe::PlayerMove(boardSpaces_t space)
 {
   int intPlayerNum = intCurrentPlayer % 2;
-  bool boolNoWinner = true;
+  static int intMovesTaken = 0;
   
   GameSpaces[space]->setText(chrPlayerMarker[intPlayerNum]);
   GameSpaces[space]->setEnabled(false);
   intPlayerMoves[space] = intPlayerNum;
+  intMovesTaken++;
   
   //check if player won
   long lngClaimedSpaces = 0;
@@ -113,18 +116,30 @@ void tictactoe::PlayerMove(boardSpaces_t space)
   {
     if((lngClaimedSpaces & lngWinningCombos[i]) == lngWinningCombos[i])
     {
-      boolNoWinner = false;
-      ui->lblMessages->setText(chrPlayerMarker[intPlayerNum] + QString(" Wins!"));
-      ToggleGameSpaces(disable);
+      gameState = winner;
       break;
     }
   }
   
-  if(boolNoWinner)
+  if(gameState == pending && intMovesTaken == 9)
+    gameState = tie;
+  
+  switch(gameState)
   {
-    intCurrentPlayer++;
-    intPlayerNum = intCurrentPlayer % 2;
-    ui->lblMessages->setText(chrPlayerMarker[intPlayerNum] + QString("'s Turn"));
+    case pending:
+      intCurrentPlayer++;
+      intPlayerNum = intCurrentPlayer % 2;
+      ui->lblMessages->setText(chrPlayerMarker[intPlayerNum] + QString("'s Turn"));
+      break;
+    case winner:
+      ui->lblMessages->setText(chrPlayerMarker[intPlayerNum] + QString(" Wins!"));
+      ToggleGameSpaces(disable);
+      intMovesTaken = 0;
+      break;
+    case tie:
+      ui->lblMessages->setText(QString("Tie Game!"));
+      intMovesTaken = 0;
+      break;
   }
 }
 
