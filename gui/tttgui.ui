@@ -251,6 +251,9 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="focusPolicy">
+    <enum>Qt::ClickFocus</enum>
+   </property>
    <property name="text">
     <string>New Game</string>
    </property>
@@ -271,7 +274,7 @@
     <number>1</number>
    </property>
    <property name="text">
-    <string>Welcome to the Tic Tac Toe C++ Test!</string>
+    <string/>
    </property>
    <property name="alignment">
     <set>Qt::AlignCenter</set>

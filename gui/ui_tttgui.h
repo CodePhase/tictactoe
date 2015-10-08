@@ -114,6 +114,7 @@ public:
         btnNew = new QPushButton(dlgTttgui);
         btnNew->setObjectName(QString::fromUtf8("btnNew"));
         btnNew->setGeometry(QRect(160, 390, 90, 31));
+	btnNew->setFocusPolicy(Qt::ClickFocus);
         lblMessages = new QLabel(dlgTttgui);
         lblMessages->setObjectName(QString::fromUtf8("lblMessages"));
         lblMessages->setGeometry(QRect(70, 70, 271, 31));
@@ -139,13 +140,13 @@ public:
         btnBC->setText(QString());
         btnBR->setText(QString());
         btnNew->setText(QApplication::translate("dlgTttgui", "New Game", 0, QApplication::UnicodeUTF8));
-        lblMessages->setText(QApplication::translate("dlgTttgui", "Welcome to the Tic Tac Toe C++ Test!", 0, QApplication::UnicodeUTF8));
+        lblMessages->setText(QString());
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class tictactoe: public Ui_dlgTttgui {};
+    class tictactoe : public Ui_dlgTttgui {};
 } // namespace Ui
 
 QT_END_NAMESPACE

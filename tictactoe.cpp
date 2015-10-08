@@ -1,9 +1,11 @@
 #include "tictactoe.h"
 #include "gui/ui_tttgui.h"
-#include <math.h>
+#include <math.h> /* for pow */
 
 
+//bitwise representations of winning square combinations
 const long tictactoe::lngWinningCombos[] = {7, 56, 448, 273, 73, 146, 84, 292};
+
 QString tictactoe::chrPlayerMarker[] = {"X", "O"};
 
 tictactoe::tictactoe()
