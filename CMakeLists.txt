@@ -4,6 +4,7 @@ find_package(Qt4 REQUIRED)
 
 include_directories(${QT_INCLUDES} ${CMAKE_CURRENT_BINARY_DIR})
 
+set(CMAKE_AUTOUIC ON)
 set(tictactoe_SRCS tictactoe.cpp main.cpp)
 
 qt4_automoc(${tictactoe_SRCS})

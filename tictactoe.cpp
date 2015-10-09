@@ -1,5 +1,5 @@
 #include "tictactoe.h"
-#include "gui/ui_tttgui.h"
+#include "ui_tictactoe.h"
 #include <math.h> /* for pow */
 
 
