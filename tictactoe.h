@@ -58,7 +58,7 @@ private:
   QPushButton *GameSpaces[9];
   int intPlayerMoves[9];
   int intCurrentPlayer;
-  static const long lngWinningCombos[];
+  static const int intWinningCombos[];
   
   void InitGame();
   void PlayerMove(boardSpaces_t);

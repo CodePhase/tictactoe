@@ -24,7 +24,7 @@
 
 
 //bitwise representations of winning square combinations
-const long tictactoe::lngWinningCombos[] = {7, 56, 448, 273, 73, 146, 84, 292};
+const int tictactoe::intWinningCombos[] = {7, 56, 448, 273, 73, 146, 84, 292};
 
 QString tictactoe::chrPlayerMarker[] = {"X", "O"};
 
@@ -125,18 +125,18 @@ void tictactoe::PlayerMove(boardSpaces_t space)
   intMovesTaken++;
   
   //check if player won
-  long lngClaimedSpaces = 0;
+  int intClaimedSpaces = 0;
   for(int i=0; i<9; i++)
   {
     if(intPlayerMoves[i] == intPlayerNum)
     {
-      lngClaimedSpaces = lngClaimedSpaces + pow(2, i);
+      intClaimedSpaces = intClaimedSpaces + pow(2, i);
     }
   }
   
   for(int i=0; i < 8; i++)
   {
-    if((lngClaimedSpaces & lngWinningCombos[i]) == lngWinningCombos[i])
+    if((intClaimedSpaces & intWinningCombos[i]) == intWinningCombos[i])
     {
       gameState = winner;
       break;
